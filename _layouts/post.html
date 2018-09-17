@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article id="post-page">
+	<h2>{{ page.title }}</h2>		
+	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+	<div class="content">
+
+		{{ content }}
+		
+	</div>
+</article>
+
+<!--
+ <ul class="pager" stytle="margin:0px;">
+    {% if page.next %}
+    <li style="float:left;list-style-type:none;"><a href="http://bitchild.github.io{{ page.next.id }}"> &larr; Previous</a></li>
+    {% else %}
+    <li style="float:left;list-style-type:none;">&larr; Previous</li>
+    {% endif %}
+    {% if page.previous %}
+    <li style="float:right;list-style-type:none;"><a href="http://bitchild.github.io{{ page.previous.id }}">Next&rarr;</a></li>
+    {% else %}
+    <li style="float:right;list-style-type:none;">Next&rarr;</li>
+    {% endif %}
+  </ul>
+-->
+
+{% include disqus.html %}
+
+<div id="back-up" style="position: fixed; right: 10px; bottom: 30px;">
+<a href="#top"><img src="https://github.com/xiaoyu33/xiaoyu33.github.io/blob/master/img/totop.png?raw=true"></a>
+</div>
